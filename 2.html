@@ -3,19 +3,41 @@
     <head>
     <title>WEB1-KBL</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/2.css">
 </head>
 <body>
-    <h1><a href="index.html">Basketball League</a></h1>
-    <ol>
-        <li><a href="1.html">NBA</a></li>
-        <li><a href="2.html">KBL</a></li>
-        <li><a href="3.html">WKBL</a></li>
+    <h1 id="main-title"><a href="index.html">Basketball League</a></h1>
+    <ol id="league-list">
+        <li class="league-item"><a href="1.html">NBA</a></li>
+        <li class="league-item"><a href="2.html">KBL</a></li>
+        <li class="league-item"><a href="3.html">WKBL</a></li>
     </ol>
-    <h2>KBL</h2>
-    개요 
-    <p>1996년 11월 22일에 창설해 1997년 2월 1일부터 개최하는 대한민국의 프로 농구 리그. 
-        한국농구연맹에서 주관한다. 
-        온라인상에서 KBO 리그를 '크보(KBO)'라고 칭하듯이 영문 약칭 발음 그대로 해서 '크블(KBL)'이라고도 부른다.
+    <h2 id="section-title">KBL? 크블!</h2>
+    <p id="overview">한국의 농구 리그</p>
+    <img id="basketball-image" src="ahn with warney.jpg" width="100%">
+    <p id="description">
+        그렇다면 한국의 농구 리그는 어디일까?<br>
+        한국의 농구 리그는 KBL로 Korean Basketball League의 준말이다.<br>
+        총 10개의 팀으로 구성되어 있으며 위 사진은 2024-2025 시즌 1위를 차지한 서울 SK.<br>
+        그 중에서도 핵심인 자밀 워니, 안영준이다.<br>
+        SK 나이츠는 주전의 나이대가 있음에도 자밀 워니라는 장기 근속 용병과<br>
+        김선형이라는 훌륭한 가드, 안영준이라는 성실한 포워드로 속공 농구를 하는 중이다.<br>
+        아래 응원가 버튼을 누르면 작성자의 카카오톡 프로필 메시지에 나온 노래를 들어볼 수 있다.
     </p>
+    <audio id="bg-music" src="song__5_for_victory.wav"></audio>
+    <button onclick="playAudio()">응원가 재생</button>
+    <button onclick="pauseAudio()">응원가 정지</button>
+
+    <script>
+        let audio = document.getElementById("bg-music");
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+    </script>
 </body>
 </html>

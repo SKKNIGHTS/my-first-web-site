@@ -1,0 +1,136 @@
+/* css/2.css */
+
+/* ✅ Google Web Font 적용 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff; /* Tailwind의 bg-slate-800 */
+    color: #e2e8f0; /* Tailwind의 text-gray-200 */
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Navbar 스타일 */
+#main-title {
+    background-color: #f43f5e; /* Tailwind의 bg-rose-500 */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#main-title a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* ✅ Dropdown 리스트 */
+#league-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.league-item {
+    display: inline-block;
+    position: relative;
+}
+
+.league-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 15px;
+    background: #f43f5e; /* Tailwind의 bg-blue-600 */
+    border-radius: 6px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.league-item:hover a {
+    background-color: #38bdf8; /* Tailwind의 bg-yellow-400 */
+    color: #f43f5e;
+}
+
+/* ✅ Dropdown 기능 */
+#league-list:hover .league-item {
+    display: block;
+}
+
+/* ✅ 섹션 타이틀 */
+#section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #38bdf8; /* Tailwind의 text-sky-400 */
+    margin-top: 20px;
+}
+
+/* ✅ 이미지 스타일 */
+#basketball-image {
+    display: block;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Padding, Margin 차이 강조 */
+#basketball-image {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(244, 63, 94, 0.2); /* 배경색 추가 */
+}
+
+/* ✅ 설명 부분 */
+#overview {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #38bdf8
+}
+
+#description {
+    text-align: center;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #1e293b; /* Tailwind의 text-gray-400 */
+    padding: 0 20px;
+}
+
+/* ✅ 반응형 스타일 */
+@media (max-width: 768px) {
+    #description {
+        padding: 0 20px;
+    }
+}
+
+body {
+    padding: 20px;  /* 페이지 여백 추가 */
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background-color: #f43f5e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #38bdf8;
+}
+
+body {
+    padding: 20px;  /* 페이지 여백 추가 */
+    font-family: Arial, sans-serif;
+}
