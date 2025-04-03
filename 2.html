@@ -24,10 +24,11 @@
         김선형이라는 훌륭한 가드, 안영준이라는 성실한 포워드로 속공 농구를 하는 중이다.<br>
         아래 응원가 버튼을 누르면 작성자의 카카오톡 프로필 메시지에 나온 노래를 들어볼 수 있다.
     </p>
+    <div id="music-controls">
     <audio id="bg-music" src="song__5_for_victory.wav"></audio>
-    <button onclick="playAudio()">응원가 재생</button>
-    <button onclick="pauseAudio()">응원가 정지</button>
-
+    <button id="play-music" onclick="playAudio()">응원가 재생</button>
+    <button id="stop-music" onclick="pauseAudio()">응원가 정지</button>
+    </div>
     <script>
         let audio = document.getElementById("bg-music");
 

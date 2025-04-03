@@ -14,6 +14,8 @@
     </ol>
     <h2 id="section-title">WKBL</h2>
     <p id="overview">우크블? WKBL!</p>
+    <button id="mode-toggle">🌞 / 🌙</button>
+
     <img id="basketball-image" src="haerant.webp" width="100%">
     <p id="description">
         여자 농구도 있다!<br>
@@ -24,5 +26,11 @@
         특이하게 외국인 용병은 없고 아시아 쿼터제를 운영하고 있다<br>
         사진은 우리 집 앞에 있는 삼성생명 블루밍스의 에이스 이해란이다.
     </p>
+    <script>
+        document.getElementById("mode-toggle").addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+        });
+        </script>
+        
 </body>
 </html>

@@ -140,6 +140,18 @@ input[type="email"], input[type="password"], input[type="file"] {
     font-size: 16px;
 }
 
+#login-button {
+    display: block; /* 버튼을 블록 요소로 만들어 줄바꿈 적용 */
+    margin: 20px auto; /* 가운데 정렬 */
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#lets-upload {
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* ✅ 반응형 스타일 */
 @media (max-width: 768px) {
     #description, #features {

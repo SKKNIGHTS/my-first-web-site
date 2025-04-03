@@ -31,6 +31,8 @@ body {
 #league-list {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
     text-align: center;
     margin-top: 20px;
     position: relative;
@@ -117,17 +119,32 @@ body {
     font-family: Arial, sans-serif;
 }
 
-button {
-    background-color: #f43f5e;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
+
+/* ✅ 버튼을 감싸는 컨테이너 스타일 */
+#music-controls {
+    display: flex; /* 가로 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 15px; /* 버튼 사이 간격 */
+    margin-top: 20px; /* 위쪽 여백 추가 */
 }
 
+/* ✅ 버튼 스타일 */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #f43f5e; /* Tailwind의 bg-blue-600 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✅ 버튼 hover 효과 */
 button:hover {
-    background-color: #38bdf8;
+    background-color: #38bdf8; /* Tailwind의 bg-yellow-500 */
 }
 
 body {
