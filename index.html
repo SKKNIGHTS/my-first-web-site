@@ -39,6 +39,10 @@
         <button id="login-button">로그인</button>
     </p>
     <p id="lets-upload">나의 농구기록을 업로드해보세요~ <input type="file" id="upload-input"></p>
+    <div id="weather-box">
+        <img id="weather-icon" alt="날씨 아이콘" style="display: none;">
+        <p id="weather-info">날씨 정보를 불러오는 중...</p>
+    </div>  
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let loginButton = document.getElementById("login-button");
@@ -66,6 +70,39 @@
             console.log("addEventListener 사용: 제목이 클릭되었습니다!");
         });
 
+        async function fetchWeather() {
+            const apiKey = "8ec1c6255241fa2dbf90cffbcf0e51fa";  // ← 실제 API 키로 교체
+            const city = "Yongin";
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=kr`;
+
+            try {
+                const response = await fetch(url);
+                console.log("응답 상태 코드:", response.status);
+
+            if (!response.ok) {
+                throw new Error(`HTTP 오류: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log("받은 데이터:", data);
+
+            const weather = data.weather[0].description;
+            const temp = Math.round(data.main.temp);
+            const icon = data.weather[0].icon;
+            const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+
+            document.getElementById("weather-info").innerText =
+                `현재 경기도 용인의 온도는 ${temp}°C, 날씨는 ${weather} 상태입니다.`;
+            const iconElem = document.getElementById("weather-icon");
+            iconElem.src = iconUrl;
+            iconElem.style.display = "inline-block";
+
+            } catch (error) {
+                document.getElementById("weather-info").innerText = "날씨 정보를 불러오지 못했습니다.";
+                console.error("날씨 API 오류:", error);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", fetchWeather);
     </script>
 </body>
 </html>
